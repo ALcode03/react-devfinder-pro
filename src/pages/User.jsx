@@ -1,10 +1,10 @@
-import { userparams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState} from 'react';
 
 export default function User() {
 
     // gt username from th URL => /user/<username>
-    const { usernamename } = useParams();
+    const { username } = useParams();
     
     const [user, setUser] = useState(null);
     const [repos, setRepos] = useState([]);
