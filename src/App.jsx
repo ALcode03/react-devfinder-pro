@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 // Import the pages
 import Home from './pages/Home';
+import User from "./pages/User";
+import Favorites from './pages/Favorites'
 
 export default function App() {
     return (
@@ -15,6 +17,15 @@ export default function App() {
                         path='/'
                         element={<Home />}
                     />
+                <Route 
+                        path='/Favorites'
+                        element={<Favorites />}
+                    /> 
+
+                <Route 
+                        path='/user/:username'
+                        element={<User />}
+                    />       
                 </Routes>
             </div>
         </>

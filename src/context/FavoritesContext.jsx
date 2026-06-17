@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const FavoritesContext = createContext();
 
@@ -11,12 +11,12 @@ export function FavoritesProvider({ children }) {
 
     return (
         <FavoritesContext.Provider value={{
-            favorites
-            addFavorit
+            favorites,
+            addFavorite
         }}>
             {children}
-            </FavoritesContext.Provider>
+        </FavoritesContext.Provider>
     );
 }
 
-export const userFavorites = () => useContext(FavoritesContext);
+export const useFavorites = () => useContext(FavoritesContext);
